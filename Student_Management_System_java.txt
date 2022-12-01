@@ -1,0 +1,183 @@
+Student Management System
+
+Main.java
+import model.Marks;
+import model.Student;
+
+public class main {
+    public static void main(String[] args) {
+        Student rita=new Student("rita",11,17);
+        Student hari=new Student("hari",11,17);
+        Marks rita1=new Marks("rita",90,90,88,87,86);
+        Marks hari1=new Marks("hari",45,90,88,80,87);
+        rita1.final_marks();
+rita.format();
+    }
+}
+
+Model
+Student
+package model;
+
+public class Student {
+    String name;
+    int classs;
+    int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getClasss() {
+        return classs;
+    }
+
+    public void setClasss(int classs) {
+        this.classs = classs;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Student(String name, int classs, int age) {
+        this.name = name;
+        this.classs = classs;
+        this.age = age;
+    }
+    public void format(){
+String format="Name"+"  "+"Class"+"  "+"Age";
+String value=this.name+"  "+this.classs+"   "+this.age;
+        System.out.println(format);
+        System.out.println(value);
+
+    }
+}
+
+Marks
+package model;
+
+public class Marks {
+    String name;
+    int math;
+    int eng;
+    int sci;
+    int nep;
+    int soc;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getMath() {
+        return math;
+    }
+
+    public void setMath(int math) {
+        this.math = math;
+    }
+
+    public int getEng() {
+        return eng;
+    }
+
+    public void setEng(int eng) {
+        this.eng = eng;
+    }
+
+    public int getSci() {
+        return sci;
+    }
+
+    public void setSci(int sci) {
+        this.sci = sci;
+    }
+
+    public int getNep() {
+        return nep;
+    }
+
+    public void setNep(int nep) {
+        this.nep = nep;
+    }
+
+    public int getSoc() {
+        return soc;
+    }
+
+    public void setSoc(int soc) {
+        this.soc = soc;
+    }
+
+    public Marks(String name, int math, int eng, int sci, int nep, int soc) {
+        this.name = name;
+        this.math = math;
+        this.eng = eng;
+        this.sci = sci;
+        this.nep = nep;
+        this.soc = soc;
+    }
+
+    public void final_marks(){
+        double final_marks=(this.math+this.eng+this.sci+this.nep+this.soc)/5;
+        System.out.println("The percentage of"+" "+this.name +" is "+final_marks);
+    }
+}
+
+
+Classes
+package model;
+
+public class Classes {
+    int first_term;
+    int second_term;
+    int third_term;
+
+    public int getFirst_term() {
+        return first_term;
+    }
+
+    public void setFirst_term(int first_term) {
+        this.first_term = first_term;
+    }
+
+    public int getSecond_term() {
+        return second_term;
+    }
+
+    public void setSecond_term(int second_term) {
+        this.second_term = second_term;
+    }
+
+    public int getThird_term() {
+        return third_term;
+    }
+
+    public void setThird_term(int third_term) {
+        this.third_term = third_term;
+    }
+
+    public Classes(int first_term, int second_term, int third_term) {
+        this.first_term = first_term;
+        this.second_term = second_term;
+        this.third_term = third_term;
+    }
+}
+
+Output:
+The percentage of rita is 88.0
+Name  Class  Age
+rita  11   17
+
